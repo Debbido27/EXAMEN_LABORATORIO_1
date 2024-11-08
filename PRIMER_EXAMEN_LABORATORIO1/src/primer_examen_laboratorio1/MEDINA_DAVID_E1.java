@@ -11,7 +11,7 @@ public class MEDINA_DAVID_E1 {
            
     
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        System.out.print("\n\n\n\n\n\n**BIENVENIDO A EJERCICIO PIRAMIDE**\nDigite la cantidad de filas que desea en la piramide: ");
+        System.out.print("\n\n\n\n\n\n**BIENVENIDO A EJERCICIO ERICKS ARQUITECTOS PYRAMIDE**\nDigite la cantidad de filas que desea en la piramide: ");
         int altura = entrada.nextInt();
 
         for (int i = 1; i <= altura; i++) {
@@ -44,7 +44,7 @@ public class MEDINA_DAVID_E1 {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
      public static void MAYOR(Scanner entrada) {
-        System.out.print("\n\n\n\n\n**BIENVENIDO A MAYOR**\nDigite un numero porfavor: ");
+        System.out.print("\n\n\n\n\n**BIENVENIDO A MAYOR **\nDigite un numero porfavor: ");
         int numero = entrada.nextInt();
 
 
@@ -108,7 +108,7 @@ public class MEDINA_DAVID_E1 {
             String nombre1 = entrada.next();
             
             int canalesHD=0;
-            int CanalesNs=9;
+            int CanalesNs=0;
             String tipodecanal;
             String seguir;
             
@@ -128,7 +128,7 @@ public class MEDINA_DAVID_E1 {
                 
             }while(seguir.equals("SI"));
             
-            System.out.println("Digite el tipo de caja digital que desea (\n1.LIGHTBOX\n 2.HDBOX \n 3.DVRBOX)\n: ");
+            System.out.println("Digite el tipo de caja digital que desea \n 1.LIGHTBOX\n 2.HDBOX \n 3.DVRBOX: ");
             int SERVICIO = entrada.nextInt();
             int costoSERVICIO =0;
             
@@ -163,8 +163,50 @@ public class MEDINA_DAVID_E1 {
         
         
         
-  
         
+        
+        
+        
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////      
+        
+      public static void VOCALES(Scanner entrada){
+          
+    
+          System.out.println("\n\n**BIENVENIDO A VOCALES APRENDIENDO CONMIGO ERICKS**\nIngrese una palabra porfavor: ");
+          String palabra = entrada.next();
+          
+          
+          
+          int vocales= 0;
+          
+          for (int i = 0; i < palabra.length(); i++) {
+              char c =  palabra.charAt(i);
+              
+              switch (c){
+                 case 'a': case 'e': case 'i': case 'o': case 'u':
+                      vocales++;
+                      break;
+                  default:
+                      break;
+                       
+              }
+              
+      }
+              System.out.println("LAS VOCALES SON: "+vocales);
+              System.out.println("GRACIAS POR USAR VOCALES");
+              System.out.println("\n\n\n\n");
+        
+      }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////       
         
         
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -176,7 +218,8 @@ public class MEDINA_DAVID_E1 {
         int op;
         
         do{
-            System.out.print("****MENU EJERCICIOS****\n1.Piramide\n2.El mayor\n3.Canales\n4.Caracteres vocales\n5.Salir\nDigite la opcion que desea: ");
+            System.out.println("=====ERICKSQUIZ=====");
+            System.out.print("\n****MENU EJERCICIOS****\n1.Piramide\n2.El mayor\n3.Canales\n4.Caracteres vocales\n5.Salir\nDigite la opcion que desea: ");
             op = entrada.nextInt();
             
              switch(op){
@@ -198,11 +241,12 @@ public class MEDINA_DAVID_E1 {
                      
                      
                  case 4:
+                     VOCALES(entrada);
                      
                      break;
                      
                  case 5:
-                     
+                     System.out.println("\n\nGRACIAS POR USAR EL PROGRAMA ERICKS QUIZ\n");
                      break;
                  
                      
