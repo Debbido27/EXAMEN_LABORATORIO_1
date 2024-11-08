@@ -17,7 +17,37 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
             System.out.print("****MENU EJERCICIOS****\n1.Piramide\n2.El mayor\n3.Canales\n4.Caracteres vocales\n5.Salir\nDigite la opcion que desea: ");
             op = entrada.nextInt();
             
-
+             switch(op){
+               
+                 case 1:
+                     
+                     break;
+                     
+                     
+                 case 2:
+                     
+                     break;
+                     
+                 case 3:
+                     
+                     break;
+                     
+                     
+                 case 4:
+                     
+                     break;
+                     
+                 case 5:
+                     
+                     break;
+                 
+                     
+                 default:
+                     
+                     break;
+                     
+                 
+             }
             
             
             
