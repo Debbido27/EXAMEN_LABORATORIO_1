@@ -9,7 +9,8 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
 
        public static void PIRAMIDE(Scanner entrada){
            
-                
+    
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         System.out.print("\n\n\n\n\n\n**BIENVENIDO A EJERCICIO PIRAMIDE**\nDigite la cantidad de filas que desea en la piramide: ");
         int altura = entrada.nextInt();
 
@@ -26,14 +27,83 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
             }
 
             System.out.println("= " + sumaaltura); 
-            System.out.println("\n\n\n\n");
+
         }
+           System.out.println("\n\n\n");
 
        }
        
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
        
        
+       
+       
+       
+       
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+     public static void MAYOR(Scanner entrada) {
+        System.out.print("\n\n\n\n\n**BIENVENIDO A MAYOR**\nDigite un numero porfavor: ");
+        int numero = entrada.nextInt();
 
+
+        int numeromayor = numero;
+        int sumanumeros = numero;
+        int contadori = 1;
+
+        int siguiente;
+        
+        
+        do {
+            System.out.print("\nDesea continuar con otro numero? (1=SI/2=NO): ");
+            siguiente = entrada.nextInt();
+           
+            
+            switch (siguiente){
+                case 1:
+                System.out.print("Digite un numero: ");
+                numero = entrada.nextInt();
+                
+                sumanumeros += numero;
+                contadori++;
+
+                if (numero > numeromayor) {
+                    numeromayor = numero;
+                }
+                    
+                    break;
+                    
+                case 2:
+                    break;
+                    
+                default:
+                    System.out.println("INGRESE UNA OPCION VALIDA!");
+                    break;
+            }
+            
+            }while(siguiente!=2);
+                
+    
+        double promedio = (double) sumanumeros / contadori;
+        System.out.println("Numero mayor ingresado: " + numeromayor);
+        System.out.println("Promedio de los numeros ingresados: " + promedio);
+        System.out.println("GRACIAS POR UTILIZAR MAYOR");
+         System.out.println("\n\n\n\n");
+    }
+    
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
+        
+        
+        
+        
+        
+  
+        
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
     public static void main(String[] args) {
         
         
@@ -54,7 +124,7 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
                      
                      
                  case 2:
-                     
+                     MAYOR(entrada);
                      break;
                      
                  case 3:
