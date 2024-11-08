@@ -4,7 +4,7 @@ package primer_examen_laboratorio1;
 import java.util.Scanner;
 
 
-public class PRIMER_EXAMEN_LABORATORIO1 {
+public class MEDINA_DAVID_E1 {
     
 
        public static void PIRAMIDE(Scanner entrada){
@@ -94,13 +94,78 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
     
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        
-        
+    
+     
+     
+     
+     
+   
+   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public static void CANALES (Scanner entrada){
+            
+            System.out.print("\n\n\n**BIENVENIDO A EJERCICIO CANALES ERICKS TV**\nIngrese su nombre porfavor: ");
+            String nombre1 = entrada.next();
+            
+            int canalesHD=0;
+            int CanalesNs=9;
+            String tipodecanal;
+            String seguir;
+            
+            do{
+                System.out.print("\nIngrese el canal que desea agregar (HD, NORMAL): ");
+                tipodecanal=entrada.next().toUpperCase();
+                
+                if(tipodecanal.equals("HD")){
+                      canalesHD++;
+                }else if (tipodecanal.equals("NORMAL")){
+                    CanalesNs++;
+                }
+                
+                System.out.println("Desea ingresar mas canales (SI/NO): ");
+                seguir=entrada.next().toUpperCase();
+                
+                
+            }while(seguir.equals("SI"));
+            
+            System.out.println("Digite el tipo de caja digital que desea (\n1.LIGHTBOX\n 2.HDBOX \n 3.DVRBOX)\n: ");
+            int SERVICIO = entrada.nextInt();
+            int costoSERVICIO =0;
+            
+            
+            
+            if(SERVICIO==1){
+                costoSERVICIO=50;                             
+            }else if(SERVICIO==2){
+                costoSERVICIO=100;
+            }else if(SERVICIO==3){
+                costoSERVICIO=150;
+            }
+            
+            int costoCN = CanalesNs * 20;
+            int costoHD =canalesHD * 30;//10 mas de la calidad hd
+            int SUBTOTAL = costoCN + costoHD +costoSERVICIO;
+            
+            //impuesto
+            double ISV = SUBTOTAL * 0.15;
+            double TOTAL = SUBTOTAL +ISV;
+            
+            
+            //RESULTADO
+            System.out.println("\nSERVICIO ERICKS TV\nCleinte :"+nombre1+"\nCanales normales: "+CanalesNs+"\nCanales HD: "+canalesHD+"\nSubtotal:"+SUBTOTAL+"Lps"+"\nISV (15%):"+ISV+"Lps"+"\nTOTAL: "+TOTAL);
+            
+            System.out.println("\n\n\n");
+            
+        }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         
         
         
         
   
+        
+        
         
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
@@ -128,7 +193,7 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
                      break;
                      
                  case 3:
-                     
+                     CANALES(entrada);
                      break;
                      
                      
