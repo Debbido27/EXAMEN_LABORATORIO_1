@@ -5,10 +5,37 @@ import java.util.Scanner;
 
 
 public class PRIMER_EXAMEN_LABORATORIO1 {
+    
 
+       public static void PIRAMIDE(Scanner entrada){
+           
+                
+        System.out.print("\n\n\n\n\n\n**BIENVENIDO A EJERCICIO PIRAMIDE**\nDigite la cantidad de filas que desea en la piramide: ");
+        int altura = entrada.nextInt();
+
+        for (int i = 1; i <= altura; i++) {
+            int sumaaltura = 0;
+            int numeroImpar = 2 * i - 1; 
+            
+            System.out.print("Fila " + i + ": ");
+            
+            for (int j = 0; j < i; j++) {
+                System.out.print(numeroImpar + " ");
+                sumaaltura += numeroImpar;
+                numeroImpar += 2; 
+            }
+
+            System.out.println("= " + sumaaltura); 
+            System.out.println("\n\n\n\n");
+        }
+
+       }
+       
+       
+       
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         
         Scanner entrada = new Scanner(System.in);
         int op;
@@ -20,6 +47,8 @@ public class PRIMER_EXAMEN_LABORATORIO1 {
              switch(op){
                
                  case 1:
+                     
+                     PIRAMIDE(entrada);
                      
                      break;
                      
